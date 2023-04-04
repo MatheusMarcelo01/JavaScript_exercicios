@@ -16,16 +16,17 @@
 
 
     <section>
-        <div id="princ">
-        <p>Digite o número desejado, para gerar a tabuada: <br> 
+        <div>
+        <p>Digite o número desejado, para gerar a tabuada: <br> </p>
                 <input type="number" name="num" id="num">
+                <input type="button" value="Gerar Tabuada" onclick="run()">
         </div>
 
-        <div id="gerar">
-        <p><input type="button" value="Gerar Tabuada" onclick="run()"></p>
+        <div id="res"> 
+            <select name="tab" id="tab" size="10">
+                <option> Digite um número acima</option>
+            </select>
         </div>
-
-        <div id="tab"> <p id="text">Digite um número no campo acima. <br> </p>  </div>
           
 
     </section>

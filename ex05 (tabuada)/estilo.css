@@ -29,11 +29,7 @@ footer{
 
 }
 
-
-#tab{
-    text-align: center;
-    height: 500px; 
-    width: 300px; 
-    overflow: auto;
+#res{
+    padding: 15px;
 }
 

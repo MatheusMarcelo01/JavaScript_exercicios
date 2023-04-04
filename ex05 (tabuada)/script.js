@@ -1,20 +1,19 @@
 function run() {
-  var tab = document.getElementById('tab');
-  var num = Number(document.getElementById('num').value);
-  var texto=document.getElementById("text")
+  let tab = document.getElementById('tab')
+  let num = document.getElementById('num')
 
-  texto.innerHTML=`Aqui esta a tabuada do número: ${num}:`
-
-  if (num < 0) {
-    window.alert('[ERRO] Digite um número positivo');
-    return; // sai da função se houver um erro
+  if (num.value.lenght == 0){
+    window.alert('Por favor, digite um número')
+  }else{
+    let n = Number(num.value)
+    let c= 1
+    tab.innerHTML= '' //antes começar tudo limpa a tabuada, para quando clicar de novo
+    while (c<=10){
+      let item = document.createElement('option') //criando um elemento do HTML dentro do JS
+      item.text = `${n} x ${c} = ${n*c}`
+      item.value = `tab${c}`
+      tab.appendChild(item)
+      c++
+    }
   }
-
-  for (var i = 1; i <= 10; i++) {
-    var resultado = num * i;
-    var linha = num + " x " + i + " =" + resultado;
-    tab.innerHTML += linha + "<br>";
-  }
-
-  
 }
